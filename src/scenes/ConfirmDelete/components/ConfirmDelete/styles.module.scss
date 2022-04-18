@@ -1,0 +1,49 @@
+.confirmBackground {
+  backdrop-filter: blur(6px) !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmForm {
+  height: 5rem;
+  padding: 1rem;
+  color: #e8eaf5;
+  background-color: #7a7a7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.confirmAction {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cancel {
+  cursor: pointer;
+  border-width: 0;
+  color: #e8eaf5;
+  background-color: #7a7a7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 6px;
+
+  &:hover {
+    text-decoration: none;
+    color: #e8eaf5;
+  }
+}
+
+.deleteAction {
+  cursor: pointer;
+  border-width: 0;
+}
