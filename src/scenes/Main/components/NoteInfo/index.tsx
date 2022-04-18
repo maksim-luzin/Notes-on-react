@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faCaretSquareDown, faTrash, faEye } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useTypedDispatch } from '../../../../common/hooks';
 import { Routes, Status } from '../../../../common/enums';
 import { notesActions } from '../../../../common/reducer';
@@ -54,16 +55,16 @@ const NoteInfo: FC<INote> = ({
       <div className={styles.content}>{getContentForView(content)}</div>
       <div className={styles.dates}>{getDateFromContent(content)}</div>
       <NavLink to={editViewRoute} className={styles.edit}>
-        <FontAwesomeIcon icon={status === Status.Active ? faPen : faEye} />
+        <FontAwesomeIcon icon={status === Status.Active ? faPen as IconProp : faEye as IconProp} />
       </NavLink>
       <div onClick={arсhiveUnzip} className={styles.archive}>
-        <FontAwesomeIcon icon={faCaretSquareDown} />
+        <FontAwesomeIcon icon={faCaretSquareDown as IconProp} />
       </div>
       {status === Status.Archive
         ? null
         : (
           <NavLink to={confirmDeleteRoute} className={styles.delete}>
-            <FontAwesomeIcon icon={faTrash} />
+            <FontAwesomeIcon icon={faTrash as IconProp} />
           </NavLink>
         )
       }
