@@ -1,0 +1,94 @@
+.createdBackground {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createdTask {
+  overflow: hidden;
+  width: 89.8305%;
+  height: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.taskOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0.2rem 0;
+  border-width: 0;
+  outline: 0;
+  margin-bottom: 1rem;
+}
+
+.selectCategory {
+  margin-right: 2rem;
+  display: flex;
+  align-items: stretch;
+
+  select {
+    margin-left: 0.5rem;
+  }
+}
+
+.noteName {
+  flex-grow: 1;
+  display: flex;
+
+  input {
+    flex-grow: 1;
+    margin-left: 0.5rem;
+  }
+}
+
+.noteContent {
+  flex-grow: 1;
+}
+
+.rowNewNote {
+  height: 3 rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cancelCreate {
+  cursor: pointer;
+  border-width: 0;
+  color: #7a7a7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 6px;
+
+  &:hover {
+    text-decoration: none;
+    color: #111;
+  }
+}
+
+.createAction {
+  cursor: pointer;
+  border-width: 0 !important;
+  outline: 0;
+  border-radius: 0 !important;
+  color: #e8eaf5;
+  background-color: #7a7a7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 6px;
+
+  &:hover {
+    text-decoration: none;
+    color: #e8eaf5;
+    background-color: #444;
+  }
+}
