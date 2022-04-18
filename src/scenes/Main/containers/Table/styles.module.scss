@@ -1,0 +1,17 @@
+.table {
+  overflow: hidden;
+  width: 89.8305%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tableWithRows {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.tableWithRows::-webkit-scrollbar {
+  width: 0;
+}
