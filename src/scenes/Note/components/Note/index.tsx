@@ -80,7 +80,6 @@ const Note = () => {
   }
 
   return (
-    <div className={styles.createdBackground}>
       <form className={styles.createdTask} name={FieldNames.Note}>
         <fieldset className={styles.taskOption}>
           <label className={styles.selectCategory}>
@@ -127,7 +126,6 @@ const Note = () => {
           }
         </div >
       </form >
-    </div >
   );
 };
 

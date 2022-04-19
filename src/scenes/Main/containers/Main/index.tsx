@@ -5,13 +5,15 @@ import { Table } from '../Table';
 import { HeadNotes, HeadSummary, NoteInfo, CategorySummary, CreateNote } from "../../components";
 import { NoteInfoTableStyle, NoteSummaryTableStyle } from '../../const';
 
+import styles from './styles.module.scss';
+
 const Main = () => {
   const pathname = useLocation().pathname.slice(1);
   const notes = useTypedSelector(({ notes: myNotes }) => myNotes).filter(({ status }) => status === pathname);
   const categories = getArrayCategoryNames();
 
   return (
-    <>
+    <div className={styles.main}>
       <Table
         key='1'
         Header={HeadNotes}
@@ -27,7 +29,7 @@ const Main = () => {
         dataArray={categories}
         style={NoteSummaryTableStyle}
       />
-    </>
+    </div>
   )
 };
 

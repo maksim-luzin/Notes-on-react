@@ -1,13 +1,12 @@
 .table {
   overflow: hidden;
-  width: 89.8305%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .tableWithRows {
   overflow-x: hidden;
   overflow-y: auto;
+  width: 100%;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
