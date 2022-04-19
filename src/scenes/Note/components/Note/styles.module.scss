@@ -1,19 +1,13 @@
-.createdBackground {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .createdTask {
-  overflow: hidden;
   width: 89.8305%;
-  height: 40rem;
+  height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  padding: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: stretch;
 }
 
@@ -49,6 +43,7 @@
 
 .noteContent {
   flex-grow: 1;
+  min-height: 8rem;
 }
 
 .rowNewNote {
