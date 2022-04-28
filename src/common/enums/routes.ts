@@ -6,7 +6,6 @@ enum Routes {
   Active = '/active',
   Archived = '/archived',
   ArchiveNote = '/archive',
-  UnzipNote = '/unzip',
   All = '*',
   FirstStart = '/',
   NotFound = '/not-found'

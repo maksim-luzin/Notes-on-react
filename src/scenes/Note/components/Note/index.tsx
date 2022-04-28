@@ -45,12 +45,12 @@ const Note = () => {
     event.preventDefault();
 
     const hasCreateUpdate = getHasCreateUpdate({
-      getCategory,
-      getName,
-      getContent,
       category,
       name,
-      content
+      content,
+      getCategory,
+      getName: getName.trim(),
+      getContent: getContent.trim()
     })
 
     if (!hasCreateUpdate) return;
@@ -59,8 +59,8 @@ const Note = () => {
       dispatch(notesActions.update({
         id,
         category: getCategory,
-        name: getName,
-        content: getContent
+        name: getName.trim(),
+        content: getContent.trim()
       }))
 
       navigate(newRoute);
@@ -80,52 +80,52 @@ const Note = () => {
   }
 
   return (
-      <form className={styles.createdTask} name={FieldNames.Note}>
-        <fieldset className={styles.taskOption}>
-          <label className={styles.selectCategory}>
-            <span>Category</span>
-            <select
-              name={FieldNames.Category}
-              disabled={disabled}
-              value={getCategory}
-              onChange={({ target: { value } }) => setCategory(value)}
-            >
-              <CategoryOptions />
-            </select>
-          </label>
-          <label className={styles.noteName}>
-            <span>Name</span>
-            <input
-              name={FieldNames.Name}
-              placeholder='Write your note name'
-              value={getName}
-              disabled={disabled}
-              onChange={({ target: { value } }) => setName(value)}
-            />
-          </label>
-        </fieldset >
-        <textarea
-          className={styles.noteContent}
-          name={FieldNames.Content}
-          placeholder='Write your note'
-          value={getContent}
-          readOnly={disabled}
-          onChange={({ target: { value } }) => setContent(value)}
-        >
-        </textarea>
-        < div className={styles.rowNewNote}>
-          <NavLink to={newRoute} className={styles.cancelCreate}>Cancel</NavLink>
-          {
-            status === Status.Archive
-              ? null
-              : (
-                <button onClick={createUpdateNote} className={styles.createAction}>
-                  {!searchId ? Actions.Create : Actions.Save}
-                </button >
-              )
-          }
-        </div >
-      </form >
+    <form className={styles.createdTask} name={FieldNames.Note}>
+      <fieldset className={styles.taskOption}>
+        <label className={styles.selectCategory}>
+          <span>Category</span>
+          <select
+            name={FieldNames.Category}
+            disabled={disabled}
+            value={getCategory}
+            onChange={({ target: { value } }) => setCategory(value)}
+          >
+            <CategoryOptions />
+          </select>
+        </label>
+        <label className={styles.noteName}>
+          <span>Name</span>
+          <input
+            name={FieldNames.Name}
+            placeholder='Write your note name'
+            value={getName}
+            disabled={disabled}
+            onChange={({ target: { value } }) => setName(value)}
+          />
+        </label>
+      </fieldset >
+      <textarea
+        className={styles.noteContent}
+        name={FieldNames.Content}
+        placeholder='Write your note'
+        value={getContent}
+        readOnly={disabled}
+        onChange={({ target: { value } }) => setContent(value)}
+      >
+      </textarea>
+      < div className={styles.rowNewNote}>
+        <NavLink to={newRoute} className={styles.cancelCreate}>Cancel</NavLink>
+        {
+          status === Status.Archive
+            ? null
+            : (
+              <button onClick={createUpdateNote} className={styles.createAction}>
+                {!searchId ? Actions.Create : Actions.Save}
+              </button >
+            )
+        }
+      </div >
+    </form >
   );
 };
 

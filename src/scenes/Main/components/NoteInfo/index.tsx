@@ -31,7 +31,7 @@ const NoteInfo: FC<INote> = ({
 
   const confirmDeleteRoute = `${Routes.ConfirmDelete}/${id}`
 
-  const arсhiveUnzip = () => {
+  const archiveUnzip = () => {
     const newStatus = status === Status.Active
       ? Status.Archive
       : Status.Active
@@ -57,7 +57,7 @@ const NoteInfo: FC<INote> = ({
       <NavLink to={editViewRoute} className={styles.edit}>
         <FontAwesomeIcon icon={status === Status.Active ? faPen as IconProp : faEye as IconProp} />
       </NavLink>
-      <div onClick={arсhiveUnzip} className={styles.archive}>
+      <div onClick={archiveUnzip} className={styles.archive}>
         <FontAwesomeIcon icon={faCaretSquareDown as IconProp} />
       </div>
       {status === Status.Archive

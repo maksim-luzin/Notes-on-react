@@ -5,12 +5,6 @@
 
 .tableWithRows {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   width: 100%;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
-}
-
-.tableWithRows::-webkit-scrollbar {
-  width: 0;
 }
