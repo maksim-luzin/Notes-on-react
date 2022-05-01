@@ -1,6 +1,6 @@
 const Status = {
   Active: 'active',
-  Archive: 'archived'
+  Archived: 'archived'
 };
 
 export { Status };

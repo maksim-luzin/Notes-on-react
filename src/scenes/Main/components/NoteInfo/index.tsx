@@ -33,7 +33,7 @@ const NoteInfo: FC<INote> = ({
 
   const archiveUnzip = () => {
     const newStatus = status === Status.Active
-      ? Status.Archive
+      ? Status.Archived
       : Status.Active
 
     dispatch(notesActions.update({
@@ -60,7 +60,7 @@ const NoteInfo: FC<INote> = ({
       <div onClick={archiveUnzip} className={styles.archive}>
         <FontAwesomeIcon icon={faCaretSquareDown as IconProp} />
       </div>
-      {status === Status.Archive
+      {status === Status.Archived
         ? null
         : (
           <NavLink to={confirmDeleteRoute} className={styles.delete}>

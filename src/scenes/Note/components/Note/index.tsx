@@ -26,11 +26,11 @@ const Note = () => {
     status
   } = useTypedSelector(({ notes }) => notes.find(note => note.id === searchId)) || NewNote;
 
-  const newRoute = status === Status.Archive
+  const newRoute = status === Status.Archived
     ? Routes.Archived
     : Routes.Active
 
-  const disabled = status === Status.Archive
+  const disabled = status === Status.Archived
   const [getCategory, setCategory] = useState(category);
   const [getName, setName] = useState(name);
   const [getContent, setContent] = useState(content);
@@ -116,7 +116,7 @@ const Note = () => {
       < div className={styles.rowNewNote}>
         <NavLink to={newRoute} className={styles.cancelCreate}>Cancel</NavLink>
         {
-          status === Status.Archive
+          status === Status.Archived
             ? null
             : (
               <button onClick={createUpdateNote} className={styles.createAction}>
