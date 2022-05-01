@@ -49,6 +49,7 @@
 .rowNewNote {
   height: 3 rem;
   padding: 1rem 0;
+  font-size: 0.9rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -61,7 +62,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1px 6px;
+  padding: 3px 8px;
+  font-weight: 600;
 
   &:hover {
     text-decoration: none;
@@ -79,7 +81,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1px 6px;
+  padding: 3px 8px;
+  font-weight: 600;
 
   &:hover {
     text-decoration: none;
