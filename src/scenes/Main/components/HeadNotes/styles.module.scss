@@ -10,46 +10,46 @@
 }
 
 .icon {
-  width: 7.5472%;
+  width: calc(7.5472 * (100% - 1rem) / 100);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .name {
-  width: 18.8679%;
+  width: calc(18.8679 * (100% - 1rem) / 100);
 }
 
 .created {
-  width: 15.0943%;
+  width: calc(15.0943 * (100% - 1rem) / 100);
 }
 
 .category {
-  width: 15.0943%;
+  width: calc(15.0943 * (100% - 1rem) / 100);
 }
 
 .content {
-  width: 15.0943%;
+  width: calc(15.0943 * (100% - 1rem) / 100);
 }
 
 .dates {
-  width: 16.9811%;
+  width: calc(16.9811 * (100% - 1rem) / 100);
 }
 
 .edit {
-  width: 3.7736%;
+  width: calc(3.7736 * (100% - 1rem) / 100);
   display: none;
   color: #7a7a7a;
 }
 
 .archive {
-  width: 3.7736%;
+  width: calc(3.7736 * (100% - 1rem) / 100);
   display: none;
   color: #7a7a7a;
 }
 
 .delete {
-  width: 3.7736%;
+  width: calc(3.7736 * (100% - 1rem) / 100);
   display: none;
   color: #7a7a7a;
 }
