@@ -1,3 +1,3 @@
-import { useSummaryNotesInCategory } from './useSummaryNotesInCategory';
+import { useGetStatsOfNotes } from './useGetStatsOfNotes';
 
-export { useSummaryNotesInCategory };
+export { useGetStatsOfNotes };

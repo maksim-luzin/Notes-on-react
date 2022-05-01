@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useTypedSelector } from '../../../../common/hooks';
-import { getArrayCategoryNames } from '../../../../common/helpers';
+import { useGetStatsOfNotes } from '../../hooks';
 import { Table } from '../Table';
 import { HeadNotes, HeadSummary, NoteInfo, CategorySummary, CreateNote } from "../../components";
 import { NoteInfoTableStyle, NoteSummaryTableStyle } from '../../const';
@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 const Main = () => {
   const pathname = useLocation().pathname.slice(1);
   const notes = useTypedSelector(({ notes: myNotes }) => myNotes).filter(({ status }) => status === pathname);
-  const categories = getArrayCategoryNames();
+  const stats = useGetStatsOfNotes();
 
   return (
     <div className={styles.main}>
@@ -26,7 +26,7 @@ const Main = () => {
         key='3'
         Header={HeadSummary}
         Row={CategorySummary}
-        dataArray={categories}
+        dataArray={stats}
         style={NoteSummaryTableStyle}
       />
     </div>

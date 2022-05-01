@@ -1,5 +1,7 @@
 interface ICategorySummary {
-  name: string;
+  category: string;
+  active: number;
+  archived: number;
 }
 
 export type { ICategorySummary };
